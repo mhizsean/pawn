@@ -1,0 +1,41 @@
+.spinner-container{
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100vh;
+    cursor: none;
+    pointer-events:none;
+    opacity: 0.8;
+    z-index: 999999999;
+}
+.spinner-container .spinner{
+    position: absolute;
+    left:50%;
+    top:50%;
+    pointer-events:none;
+    transform: translate(-50%,-50%);
+}
+.spinner-container .spinner .loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid orangered;
+    width: 80px;
+    height: 80px;
+    pointer-events:none;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

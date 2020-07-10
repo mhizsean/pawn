@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Component_2_2" data-name="Component 2 – 2" opacity="0.5">
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="24" height="24" rx="5" fill="#f9f9fa"/>
+    <g id="bx-bx-right-arrow-alt" transform="translate(19.371 19.371) rotate(180)">
+      <g id="Icon" transform="translate(2.751 2.427)">
+        <path id="Icon_Path" data-name="Icon Path" d="M3.9,8.845,4.944,9.887,9.887,4.944,4.944,0,3.9,1.042,7.066,4.207H0V5.681H7.066Z" fill="#6c6c6c"/>
+      </g>
+      <rect id="ViewBox" width="14" height="14" transform="translate(0.371 0.371)" fill="none"/>
+    </g>
+  </g>
+</svg>
