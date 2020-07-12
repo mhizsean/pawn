@@ -5,6 +5,7 @@ import DrivingState from './DrivingState';
 import Nav from './Nav';
 import mobile from './images/aboutpage/mobile.png'
 import Fade from 'react-reveal/Fade';
+import mobileTopWave from './images/aboutpage/mobileTopWave.svg'
 
 import {TimelineLite ,TweenMax, Power3} from 'gsap';
 import { useIntersection } from "react-use";
@@ -32,6 +33,7 @@ import pagarrow1 from './images/aboutpage/pagarrow1.png';
 
 
 const useStyles = makeStyles({
+
  topSpace:{
       display: 'none',
     },
@@ -45,18 +47,19 @@ const useStyles = makeStyles({
     width: '100%'
   },
   positionsTitle:{
-    fontWeight: 'normal'
+    fontWeight: 'normal',
+    textAlign: 'center'
   },
   root: {
     width: '100%',
     top: '-350px',
     position: 'absolute',
-    // zIndex: '-1',
+    zIndex: '-1',
     // backgroundColor: '#1a1a1a',
     // backgroundBlendMode: 'overlay',
     // opacity: '0.6',
   },
-  intro: {
+  top: {
     marginTop: '10%',
     marginBottom: '10%',
     width: '100%',
@@ -148,7 +151,7 @@ const useStyles = makeStyles({
     lineHeight: '30px',
   },
   meetImages: {
-    width: '60%',
+    width: '50%',
   },
   meetImage:{
     padding: 5,
@@ -157,10 +160,18 @@ const useStyles = makeStyles({
     marginLeft: '40px',
     marginTop: '50px'
   },
+  aboutMobileBottomWave:{
+    display: 'none'
+  },
+  aboutMobileTopWave:{
+    display: 'none'
+  },
   aboutSection: {
     backgroundColor: '#efefefa1',
     // height: 'auto'
-    padding: '50px'
+    padding: '50px',
+    width: '100%'
+    
   },
   working: {
     marginTop: '-200px',
@@ -169,6 +180,7 @@ const useStyles = makeStyles({
       marginTop: '50px',
       textAlign: 'center',
       color: colors.brown,
+      fontSize: '30px'
     },
   },
   workingImage: {
@@ -214,6 +226,7 @@ const useStyles = makeStyles({
       '& h3': {
         color: colors.brown,
         fontSize: '18px',
+        fontWeight: 'bolder'
       },
       '& p': {
         color: colors.darkGreyTxt,
@@ -227,12 +240,13 @@ const useStyles = makeStyles({
   },
   positions: {
     marginBottom: '150px',
-    marginTop: '200px',
+    marginTop: '100px',
     '& h4': {
       fontSize: '25px',
       marginBottom: '50px',
       color: colors.brown,
-      textAlign: 'left',
+      textAlign: 'center',
+      fontWeight: 'bold'
     },
     // job:{
     //   display: 'flex',
@@ -305,367 +319,96 @@ const useStyles = makeStyles({
       color: colors.orangeRed,
     },
   },
-
-  '@media(max-width: 991px)': {
-    root: {
-      width: '100%',
-      marginTop: '75px',
-      top: '-110px',
-    },
-    intro: {
-      marginTop: '0%',
-      marginBottom: '15%',
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      position: 'relative',
-      '& h1':{
-      fontSize: '50px',
-      marginTop: '100px',
-      marginLeft: '20px',
-      width: '100%',
-      flex: 1,
-      },
-      '& p': {
-      fontSize: '18px',
-      marginLeft: '20px',
-      lineHeight: '30px',
-      marginTop: '30px',
-      marginRight: '20px',
-      marginBottom: '50px',
-      width: '100%',
-      flex:1,
-      },
-      '& button':{
-        backgroundColor: colors.orangeRed,
-        color: colors.white,
-        padding: '25px 30px',
-        border: 'none',
-        borderRadius: '5px',
-        fontSize: '15px',
-        lineHeight: '25px',
-        marginLeft: '20px',
-        marginTop: '0',
-        width: '25%'
-      }
-
-
-    },
-    sub: {
-      width: '60%',
-      margin: '0 auto',
-      position: 'absolute',
-      top: '300px'
-    },
-    subNav: {
-      position: 'absolute',
-      top: '300px',
-      left: '200px'
-    },
-    meetWrapper: {
-      display: 'flex',
-      marginTop: '200px',
-      width: '100%',
-    },
-    meetContent: {
-      meetContent: {
-        width: '100%',
-      },
-    },
-    meetImages: {
-      width: '90%',
-    },
-    meetImage:{
-      padding: 5,
-    },
-    workingHeadline: {
-      top: '100px',
-    },
-    workingContainer: {
-      marginTop: '140px',
-    },
-    workingImage: {
-      height: '140%',
-    },
-    pagination: {
-      margin: '0 auto',
-      width: '60%',
-    },
-    pagText: {
-      width: '100%',
-      fontSize: '15px',
-    },
+'@media(min-width: 320px)':{
+  aboutDesktopTopWave:{
+    display:'none'
   },
-  '@media(max-width: 767px)': {
-    aboutSection:{
-      // backgroundColor: '#F9F9FA',
-      // height: '110vh',
-      // width: '100%',
-       position: 'relative',
-      bottom: '100vh',
-      display: 'block',
-      marginBottom: '0px'
-    },
-    describe:{
-      display: 'block' ,
-      marginLeft: '15px',
-      marginRight: '15px',
-      lineHeight: '30px'
-   
-    },
-    topSpace:{
-      display: 'block',
-      position: 'relative',
-      bottom: '50px',
-    },
-    company:{
-      position: 'relative',
-      bottom: '30vh'
-    },
-    main:{
-  //  '& svg': {
-  //    display: 'block',
-  //    top: '250px',
-  //    position: 'relative',
-  //  },
-   backgroundImage: `url(${mobile})`,
-   height:'130vh',
-   width: '100%',
-   backgroundRepeat: 'no-repeat',
-   objectFit: 'cover',
-   position: 'relative',
-   bottom: '80px',
-   marginRight: '0px',
-   backgroundSize: '100%'
- },
-    root: {
-      // width: '100%',
-      // marginTop: '5px',
-      // top: '-100px',
-      // height: '95%',
-      display:'none'
-    },
-    intro: {
-      marginTop: '0%',
-      marginBottom: '5%',
-      width: '100%',
-      position: 'relatve',
-      top: '50px'
-    },
-
-    headline: {
-      fontSize: '45px',
-      marginLeft:0,
-      position: 'relative',
-      right:'10px'
-    },
-    description: {
-      fontSize: '13px',
-      lineHeight: '25px',
-    },
-    button: {
-      padding: '15px 20px',
-      borderRadius: '5px',
-      fontSize: '18px',
-      marginTop:'30px',
-      width: '150px',
-      height: '70px'
-    },
-    sub: {
-      width: '90%',
-      marginBottom: '10px',
-      position: 'absolute',
-      right: '200px',
-      top: '100vh',
-    },
-    subNav:{
-      backgroundColor: '#F8F8FF',
-    },
-   meetWrapper: {
-      display: 'flex',
-      flexReverse: 'row',
-    },
-    meetContent: {
-      width: '100%',
-      position: 'relative',
-      top: '270px',
-      flex: 1
-    },
-    meetContentH1: {
-      fontWeight: 'normal',
-      position: 'relative',
-      bottom: '150px',
-      marginTop: '20px'
-    },
-    meetContentP: {
-      fontWeight: 'normal',
-      justifyContent: 'center',
-      position: 'relative',
-      top: '250px',
-    },
-    meetImages: {
-      flex: 1,
-      maxWidth: '100%',
-      position: 'relative',
-      bottom: '120px',
-      marginRight: '10px',
-      marginLeft: '10px'
-        },
-    meetImage: {
-      flex: '15%',
-      maxWidth: '45%'
-    },
-    meetImageOne:{
-      marginLeft: 'px'
-    },
-    working: {
-      position: 'relative',
-      top: '100vh',
-      display: 'flex'
-    },
-    workingImage:{
-      // position: 'relative',
-      // bottom: '40px',
-      height: '300px'
-    },
-    workingContainer: {
-      flexDirection: 'column',
-      alignItems: 'center',
-    },
-    positions: {
-      display: 'block',
-      position:'relative',
-      // top:'1vh',
-      marginBottom: '150px',
-      '& h4': {
-        fontSize: '25px',
-        marginBottom: '50px',
-        color: colors.brown,
-        textAlign: 'center',
-      },
-      '& div': {},
-      '& section': {
-        margin: '15px',
-        padding: '15px',
-        fontSize: '12px',
-      },
-    },
-    pagination: {
-      width: '100%',
-
-      '& a': {
-        color: 'black',
-        float: 'left',
-        padding: '8px 16px',
-        textDecoration: 'none',
-      },
-    },
-    pagText: {
-      marginTop: '20px',
-      textAlign: 'center',
-      lineHeight: '15px',
-      width: '100%',
-      fontSize: '13px',
-    },
+  aboutDestopBottomWave:{
+    display:'none',
   },
-  '@media(max-width: 575px)': {
-    intro: {
-      width: '100%',
-      marginBottom: '5%',
-    },
-    headline: {
-      whiteSpace: 'nowrap',
-      fontSize: '35px',
-    },
-    description: {
-      fontSize: '14px',
-    },
-    sub: {
-      width: '100%',
-      margin: '0 auto',
-    },
-    meetWrapper: {
-      display: 'block',
-      marginTop: '60px',
-    },
-    meetContent: {
-      width: '100%',
-    },
-
-    meetImages: {
-      width: '100%',
-    },
+  aboutMobileTopWave:{
+      display:'block',
+      position: 'relative',
+      top: '2px'
   },
-  '@media(max-width: 450px)': {
-    intro: {
-      width: '100%',
-      marginBottom: '50%',
-    },
-    headline: {
-      textAlign: 'center',
-      width: '80%',
-    },
-    description: {
-      width: '90%',
-    },
-    sub: {
-      width: '90%',
-      margin: '0 auto',
-    },
-    meetWrapper: {
-      display: 'block',
-      marginTop: '60px',
-    },
-    meetContent: {
-      width: '100%',
-    },
-
-    meetImages: {
-      width: '100%',
-    },
-    workingImage: {
-      height: '280%',
-    },
-    pagination: {
-      margin: '0 auto',
-      width: '100%',
-
-      '& a': {
-        fontSize: '13px',
-      },
-    },
-    pagText: {
-      fontWeight: 'bold',
-      fontSize: '12px',
-    },
+  aboutMobileBottomWave:{
+    display:'block'
   },
-  '@media(max-width: 360px)': {
-    intro: {
-      width: '100%',
-      marginBottom: '140%',
+  subNavA: {
+    padding: '20px',
+    textDecoration: 'none',
+    color: colors.maroon,
+    transition: 'all linear 0.3s',
+    '&:hover': {
+      color: colors.orangeRed,
+      textDecoration: 'none',
     },
-    headline: {
-      fontSize: '25px',
-    },
-    description: {
-      width: '90%',
-    },
-    sub: {
-      width: '95%',
-      margin: '0 auto',
-    },
-    meetWrapper: {
-      display: 'block',
-      marginTop: '60px',
-    },
-    meetContent: {
-      width: '100%',
-    },
-
-    meetImages: {
-      width: '100%',
-    },
+    width: '100%',
+    marginLeft: '10px'
   },
+  subNav: {
+    marginTop: '0%',
+    textAlign: 'center',
+    backgroundColor: '#f9f8f8',
+    // padding: '20px',
+    position: 'relative',
+    marginBottom: '20px',
+    right: '100px'
+  },
+  meetWrapper:{
+    display: 'flex',
+    flexReverse: 'row',
+    position: 'relative'
+  },
+  meetContentH1:{
+    fontWeightt: 'normal',
+    position: 'relative',
+    bottom: '150px',
+    marginTop: '20px'
+  },
+  meetContentP:{
+    fontWeight: 'normal',
+    justifyContent: 'center',
+    position: 'relative',
+    top: '250px',
+  },
+
+  meetContent: {
+    width: '100%',
+    position: 'relative',
+    top: '270px',
+    flex: 1
+  },
+  meetImages:{
+    flex: 1,
+    Width: '100%',
+    position: 'relative',
+    bottom: '100px',
+    margin: '0px auto'
+  },
+  meetImage:{
+    flex: '15%',
+    maxWidth: '45%'
+  },
+  meetImageOne:{
+    marginLeft: '10px'
+  }
+},
+'@media(min-width: 767px)':{
+  aboutDesktopTopWave:{
+    display: 'block'
+  },
+  aboutMobileBottomWave:{
+    display: 'none'
+  },
+  aboutMobileTopWave:{
+    display: 'none'
+  },
+  aboutDestopBottomWave:{
+    display:'block',
+  },
+}
+
 });
 
 const workings = [
@@ -799,151 +542,174 @@ export default function About() {
   // let content = useRef(null)
   // let tl = new TimelineLite({ delay: .8});
 
-  // useEffect(() => {
-  //   const imageOne = images.children[0]; // or children[0]
-  //   const imageTwo = images.children[1];
-  //   const imageThree = images.children[2];
-  //   const imageFour = images.children[3];
-
-  //   TweenMax.to(app, 0, {css: {visibility: 'visible'}})
-  //   // console.log(imageOne, imageTwo, imageThree, imageFour)
-
-  //       //Images Animation
-  //       tl.from(imageOne, 1.2, {y: 1280, ease: Power3.easeOut},'Start')
-  //       .from(imageOne.children[0], 2, {scale: 1.6, ease: Power3.easeOut}, .2)
-  //       .from(imageTwo, 1.4, {y: 1280, ease: Power3.easeOut}, .2)
-  //       .from(imageTwo.children[1], 2, {scale: 1.6, ease: Power3.easeOut}, .2)
-  //       .from(imageThree, 1.6, {y: 1280, ease: Power3.easeOut}, .2)
-  //       .from(imageThree.children[2], 2, {scale: 1.6, ease: Power3.easeOut}, .2)
-  //       .from(imageFour, 1.8, {y: 1280, ease: Power3.easeOut}, .2)
-  //       .from(imageFour.children[3], 2, {scale: 1.6, ease: Power3.easeOut}, .2)
-    
-  // })
+  
   return (
     <>
-          <div className={classes.main} >
-             <Nav/>
-            {/* <svg className={classes.topSpace} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f2f2f2" fill-opacity="1" d="M0,128L0,256L1440,256L1440,320L0,320L0,320Z"></path></svg> */}
-            <img src={main} alt="" className={classes.root} />
-            {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,192L120,197.3C240,203,480,213,720,186.7C960,160,1200,96,1320,64L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg> */}
-            <div className={classes.intro}>
-              <h1 className={classes.headline}>Join Our Team!</h1>
-              <p className={classes.describe}>Want to work for an amazing start up with awesome benefits, great growth potential and career development? Well look no further! Here at Pawndr we love to hire the best talent to join our company & community.</p>
-              <button className={classes.button}>View Jobs</button>
+        <div className={classes.main} >
+            
+            <div className='top'>
+                <div className="top-one">
+                    <Nav/>
+
+                    <div className="desc">
+                        {/* <div className='info' > */}
+
+                            <h1 className='headline'>Join Our Team!</h1>
+
+                            <p className='describe'>Want to work for an amazing start up with awesome benefits, great growth potential and career development? Well look no further! Here at Pawndr we love to hire the best talent to join our company & community.</p>
+
+                            <button className='button'>View Jobs</button>
+
+                        {/* </div> */}
+                    </div>
+                    
+                </div>
+                 
             </div>
           
-          </div>
-        <main >
+        </div>
 
-          <section className={classes.sub}>
-            <div className={classes.subNav}>
-              <a href="#company" className={classes.subNavA}>
-                Company
-              </a>
-              <a href="#values" className={classes.subNavA}>
-                Values
-              </a>
-              <a href="#jobs" className={classes.subNavA}>
-                Jobs
-              </a>
-            </div>
-          </section>
-        <div className="container">
-          <div className={classes.company} >
-            <div className={classes.meetWrapper} id="company" >
-              <div ref={sectionRef} className={classes.meetContent}>
-                <h1 className={`${classes.meetContentH1} `}>Meet Our Company</h1>
-                <p className={`${classes.meetContentP} `}>
-                Pawndr started as a little humble Miami -based start up that believes
-                in the fair treatment for all lives, both man and animal.{' '}
-                </p><br/><br/>
-                <p className={`${classes.meetContentP}`}>
-                We built are company on strong ethic and moral values that has now 
-                since transformed the way pets, animals and livestock are 
-                transported and cared for. We are a for-profit business with non profit values. {' '}
-                </p>
-              </div>
-              <div className={classes.meetImages} ref={sectionRef}>
-                <img src={meet1} alt=""  className={`${classes.meetImage, classes.meetImageOne} fadeIn`} style={{marginLeft: 20, marginRight: 5}} />
-                <img src={meet2} alt="" className={`${classes.meetImage} fadeIn`} />
-                <img src={meet} alt="" className={`${classes.meetImage} fadeIn`} style={{marginTop:0,position:'relative', width: 250, height: 150  }} />
-                <img src={meet3} alt="" className={`${classes.meetImage} fadeIn`} style={{position: 'relative', left: 25}} />
-              </div>
-            </div>
-          </div>
-          </div>
-          <div className={classes.aboutSection}>
-            <div className={classes.working} id="values">
-              {/* <img src={working} className={classes.workingImage} alt="" /> */}
-              <div className="container">
-                <h1 className={classes.workingHeadline}>About Working Here</h1>
-                <div className={classes.workingContainer}>
-                  {workings.map((working, index) => (
-                    <Fade bottom up>
-                      <div key={index} className={classes.workSection}>
-                        <img src={working.image} alt="" />
-                        <h3 style={{marginTop: 20, marginBottom: 20, fontWeight: 'normal'}}>{working.tagline}</h3>
-                        <p>{working.text}</p>
-                      </div>
-                    </Fade>
-                  ))}
+        <div className="main-section">
+            <main >
+
+            <section className={classes.sub}>
+
+                <div className={classes.subNav}>
+                    <a href="#company" className={classes.subNavA}>
+                        Company
+                    </a>
+
+                    <a href="#values" className={classes.subNavA}>
+                        Values
+                    </a>
+                    
+                    <a href="#jobs" className={classes.subNavA}>
+                        Jobs
+                    </a>
                 </div>
-                <h5>Come join our family</h5>
-              </div>
-            </div>
-          </div>
 
-          <div className={classes.positions} id="jobs">
+            </section>
+
             <div className="container">
-              <h4 className={classes.positionsTitle}>Open Positions</h4>
-              <div className={classes.job} >
-                {positions.map((position, i) => (
-                  <section key={i}>
-                      <span>{position.tagline}</span>
-                      <span>{position.text}</span>
-                      <img src={position.image} alt="" />
-                  </section>
-                ))}
-              </div>
-              <div className={classes.pagination}>
-                <a href="!#" alt="">
-                  <img src={pagarrow} alt="" />
-                </a>
-                <a href="!#" alt="">
-                  1
-                </a>
-                <a href="!#" alt="">
-                  2
-                </a>
-                <a href="!#" alt="">
-                  3
-                </a>
-                <a href="!#" alt="">
-                  4
-                </a>
-                <a href="!#" alt="">
-                  ...
-                </a>
-                <a href="!#" alt="">
-                  50
-                </a>
-                <a href="!#" alt="">
-                  <img src={pagarrow1} alt="" />
-                </a>
-                <br />
-                <br />
-                <br />
-              </div>
-              <p className={classes.pagText}>
-                If your career has been impacted by covid-19 and you don’t see a
-                position that fits what you’re looking for,
-                <br />
-                <span>send your resume.</span>
-                We’ll keep it on file for the future.
-              </p>
+                
+                <div className={classes.company} >
+                
+                    <div className={classes.meetWrapper} id="company" >
+                        
+                        <div ref={sectionRef} className={classes.meetContent}>
+                            <h1 className={`${classes.meetContentH1} `}>Meet Our Company</h1>
+                              <p className={`${classes.meetContentP} `}>
+                            Pawndr started as a little humble Miami -based start up that believes
+                            in the fair treatment for all lives, both man and animal.{' '}
+                            </p><br/><br/>
+                            <p className={`${classes.meetContentP}`}>
+                            We built are company on strong ethic and moral values that has now 
+                            since transformed the way pets, animals and livestock are 
+                            transported and cared for. We are a for-profit business with non profit values. {' '}
+                            </p>
+                        </div>
+
+                        <div className={classes.meetImages} ref={sectionRef}>
+                            <img src={meet1} alt=""  className={`${classes.meetImage, classes.meetImageOne} fadeIn`} style={{marginLeft: 20, marginRight: 5}} />
+                            <img src={meet2} alt="" className={`${classes.meetImage} fadeIn`} />
+                            <img src={meet} alt="" className={`${classes.meetImage} fadeIn`} style={{marginTop:0,position:'relative', width: 250, height: 150  }} />
+                            <img src={meet3} alt="" className={`${classes.meetImage} fadeIn`} style={{position: 'relative', left: 25}} />
+                        </div>                  
+
+                    </div>
+
+                </div>
+
+             </div>
+                {/* style in the index.css */}
+                {/* <svg className={classes.aboutTopWave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,160L120,176C240,192,480,224,720,245.3C960,267,1200,277,1320,282.7L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg> */}
+                {/* <div className={classes.aboutMobileTopWave}></div> */}
+               <svg className={classes.aboutDesktopTopWave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,288L80,261.3C160,235,320,181,480,170.7C640,160,800,192,960,218.7C1120,245,1280,267,1360,277.3L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>                <svg className={classes.aboutMobileTopWave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,96L120,101.3C240,107,480,117,720,154.7C960,192,1200,256,1320,288L1440,320L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+               <div className={classes.aboutSection}>
+                    <div className={classes.working} id="values">
+                    {/* <img src={working} className={classes.workingImage} alt="" /> */}
+                        <div className="container">
+                            <h1 className={classes.workingHeadline}>About Working Here</h1>
+                            
+                            <div className={classes.workingContainer}>
+                                {workings.map((working, index) => (
+                                
+                                <Fade bottom up>
+                                    <div key={index} className={classes.workSection}>
+                                        <img src={working.image} alt="" />
+                                        <h3 style={{marginTop: 20, marginBottom: 20, fontWeight: 'bolder'}}>{working.tagline}</h3>
+                                        <p>{working.text}</p>
+                                    </div>
+                                </Fade>
+                                ))}
+                            </div>
+                        </div>
+
+                        <h5>Come join our family</h5>
+                </div>
+
+
             </div>
-          </div>
-        </main>
-    </>
+            <svg className={classes.aboutMobileBottomWave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,256L120,245.3C240,235,480,213,720,181.3C960,149,1200,107,1320,85.3L1440,64L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
+            <svg className={classes.aboutDestopBottomWave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,42.7C1120,21,1280,43,1360,53.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+            <div className={classes.positions} id="jobs">
+                    <div className="container">
+                        <h4 className={classes.positionsTitle}>Open Positions</h4>
+                        <div className={classes.job} >
+                            {positions.map((position, i) => (
+                            <section key={i}>
+                                <span>{position.tagline}</span>
+                                <span>{position.text}</span>
+                                <img src={position.image} alt="" />
+                            </section>
+                            ))}
+                        </div>
+
+                        <div className={classes.pagination}>
+                            <a href="!#" alt="">
+                                <img src={pagarrow} alt="" />
+                            </a>
+                            <a href="!#" alt="">
+                                1
+                            </a>
+                            <a href="!#" alt="">
+                                2
+                            </a>
+                            <a href="!#" alt="">
+                                3
+                            </a>
+                            <a href="!#" alt="">
+                                4
+                            </a>
+
+                            <a href="!#" alt="">
+                                ...
+                            </a>
+                            
+                            <a href="!#" alt="">
+                                50
+                            </a>
+
+                            <a href="!#" alt="">
+                                <img src={pagarrow1} alt="" />
+                            </a>
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+
+                        <p className={classes.pagText}>
+                        If your career has been impacted by covid-19 and you don’t see a
+                        position that fits what you’re looking for,
+                        <br />
+                        <span>send your resume.</span>
+                        We’ll keep it on file for the future.
+                        </p>
+                </div>
+                </div>
+            </main>
+
+        </div>
+            </>
   );
 }

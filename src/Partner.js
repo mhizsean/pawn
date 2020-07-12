@@ -23,12 +23,14 @@ const useStyles = makeStyles({
         },
         nav:{
             position:'relative',
-            top: '20vh',
+            marginTop: '20px',
+            paddingLeft: '60px'
         },
         partnerSection:{
             backgroundImage: `url(${main})`,
-            height: '180vh',
+            height: '1220px',
             width: '100%',
+            padding: '100px',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
@@ -42,68 +44,70 @@ const useStyles = makeStyles({
             width: 'auto',
             top: '60px'
         },
-        nav:{
-            overflow: 'hidden'
+    
+        intro: {
+        maxWwidth: '100%',
+        position: 'absolute',
+        bottom: '70vh',
         },
-       
-          intro: {
-            width: '100%',
-            position: 'absolute',
-            bottom: '70vh',
-          },
-          headline: {
-            color: colors.white,
-            fontSize: '50px',
-            lineHeight: '60px',
-            marginBottom: 0,
-            marginLeft: '15%',
-            fontWeight: 'normal',
+        headline: {
+        color: colors.white,
+        fontSize: '50px',
+        fontWeight: 'bold',
+        lineHeight: '60px',
+        marginBottom: 0,
+        marginLeft: '150px'
+        },
+        description: {
+        outline:0,
+        color: colors.white,
+        fontSize: '14px',
+        lineHeight: '20px',
+        marginLeft: '150px',
+        marginRight: '20%',
+        marginTop: '50px',
+        fontWeight: 'normal'
 
-          },
-          description: {
+        },
+        form:{
+            textAlign: 'center',
+            margin: 'auto',
+            width: '80%'
+        },
+        title:{
+            textAlign: 'center',
+
+            color: colors.brown,
+            fontSize: '25px',
+            fontWeight: 'bold'
+        },
+        subtitle:{
+            color: colors.DarkgreyTxt,
+        //   marginTop: '15px',
+        //   marginBottom: '40px',
+        margin: '20px auto',
+            width: '50%',
+            fontSize: '15px'
+        },
+        formBox:{
+            display: 'flex',
+            width: '60%',
+            margin: '0 auto',
+            flexDirection:'row',
+            flexWrap: 'wrap'
+            },
+        name:{
+            paddingLeft:"10px",
             outline:0,
-            color: colors.white,
-            fontSize: '14px',
-            lineHeight: '20px',
-            marginLeft: '15%',
-            marginRight: '20%',
-            marginTop: '50px',
-            fontWeight: 'normal'
-
-          },
-          form:{
-              textAlign: 'center',
-          },
-          title:{
-              textAlign: 'center',
-              color: colors.brown,
-              fontSize: '25px',
-              fontWeight: 'bold'
-          },
-          subtitle:{
-              color: colors.DarkgreyTxt,
-              marginTop: '15px',
-              marginBottom: '40px'
-          },
-          formBox:{
-              display: 'flex',
-              width: '60%',
-              margin: '0 auto',
-              flexDirection:'row',
-              flexWrap: 'wrap'
-                },
-          name:{
-              paddingLeft:"10px",
-              outline:0,
-              flex: '0 0 100%',
-              width: '100%',
-              height: '6vh',
-              backgroundColor: '#DCDCDC',
-              borderRadius: '5px',
-              border: '1px solid #DCDCDC ',
-              marginBottom: '20px'
-          },
-          email:{
+            flex: '0 0 100%',
+            width: '100%',
+            height: '6vh',
+            backgroundColor: '#DCDCDC',
+            borderRadius: '5px',
+            border: '1px solid #DCDCDC ',
+            marginBottom: '20px'
+        },
+        email:{
               paddingLeft:"10px",
               outline:0,
             flex: '0 0 100%',
@@ -182,6 +186,21 @@ const useStyles = makeStyles({
             outline:0,
             fontWeight:"bold"
         },
+        '@media(max-width: 10250px)': {
+            contain: {
+                marginLeft: '-40px',
+            },
+            
+            headline: {
+                marginLeft: '0',
+
+            },
+            description: {
+                margin: '0 ',
+                width: '80%',
+            }
+            
+        },
         '@media(max-width: 767px)': {
             roleSize:{
                 display: 'flex',
@@ -214,20 +233,20 @@ const useStyles = makeStyles({
             top: '5vh',
             },
          partnerSection:{
-            backgroundImage: `url(${mobile})`,
+            // backgroundImage: `url(${mobile})`,
             height: '100vh',
             width: '100%',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             position: 'relative',
-            bottom: '1vh',
+            // bottom: '1vh',
             display: 'block'
         },
         contain:{
-           display: 'none'
+        //    display: 'none'
         },
         nav:{
-            overflow: 'block'
+            // overflow: 'block'
         },
             formBox:{
                 display: 'flex',
@@ -255,7 +274,7 @@ const useStyles = makeStyles({
                 fontSize: '2.0em',
                 lineHeight: '40px',
                 margin: '0 auto',
-                fontWeight: 'normal',
+                fontWeight: 'bolder',
                 width: '100%',
                 position: 'relative',
                 top: '10vh',
@@ -268,7 +287,6 @@ const useStyles = makeStyles({
                 lineHeight: '40px',
                 fontWeight: 'normal',
                 margin: '0 auto',
-                fontWeight: 'normal',
                 width: '100%',
                 position: 'relative',
                 top: '20vh',
@@ -278,9 +296,49 @@ const useStyles = makeStyles({
               title:{
                 marginRight: '10px',
                 textAlign: 'center',
-                overflow: 'hidden',
+                // overflow: 'hidden',
                 whiteSpace: "nowrap",
               }
+        },
+        '@media(max-width: 320px)': {
+            nav:{
+                backgroundColor: '#fff',
+                margin: '20px',
+
+            },
+            partnerSection: {
+                height: '650px',
+            }, 
+            intro: {
+                marginLeft: '-20px',
+                // width: '100%',
+                marginTop: '-60px'
+            },
+            headline: {
+                top: '20px',
+                width: '260px',
+                marginLeft: '-30px',
+                lineHeight: '40px',
+                fontSize: '40px',
+            },
+            description: {
+                // marginTop: '20px',
+                top: '50px',
+                width: '250px',
+                padding: '0',
+                marginLeft: '-30px',
+                lineHeight: '20px',
+                letterSpacing: ''
+            },
+            title: {
+                textAlign:'center',
+                margin: '-20px',
+            },
+            subtitle: {
+                width: '240px',
+                marginTop: '30px',
+                marginLeft: '10px'
+            }
         }
 })
 
@@ -346,39 +404,40 @@ export default function Partner() {
 
     return (
         <>
-            <div className={classes.mobileNav}>
-                <Nav />
-            </div>
+           
             <main>
                 <Loader loading={loading}/>
-                <div className={classes.partnerSection}>
-                  <div className={classes.contain}>
-                    <div className={classes.nav}>
-                      <Nav />
+                <div className={classes.partnerSection} id="header-partner">
+                    <div className={classes.contain}>
+                        <div className={classes.nav} >
+                        <Nav />
+                        </div>
                     </div>
-                  </div>
                     <div className={classes.intro}>
-                        <h1 className={classes.headline}>Partner with Pawndr and Earn Recurring</h1>
+                        <h1 className={classes.headline}>Partner with Pawndr and Earn <br/>Recurring Revenue</h1>
                         <p className={classes.description}>
                             Pawndr is all about working together to build a better community and all together better world.
                             We are always eager to work with brands that support our causes and values..
                         </p>
                     </div>
                 </div>
-                {/* <svg  className={classes.bottomWave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,288L80,293.3C160,299,320,309,480,293.3C640,277,800,235,960,197.3C1120,160,1280,128,1360,112L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
-                <svg className={classes.bottomWave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,320L80,314.7C160,309,320,299,480,261.3C640,224,800,160,960,117.3C1120,75,1280,53,1360,42.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>                <div className="container">
-                    <div className={classes.form}>
+             
+                <div className="container">
+                    <div className={classes.form} id="partner-form">
                         <div className={classes.title}>
                             Want to work with us?
                         </div>
                         <div className={classes.subtitle}>
-                            Great! Just fill out the form below and someone will reach out to you!
+                            <p>Great! Just fill out the form below and someone will reach out to you! </p>
                         </div>
                         <form action="" id={"partner-form"} onSubmit={handleSubmit} autoComplete={"off"}>
                             <div className={classes.formBox}>
                                 <input value={data.name} type="text" name={"name"} onChange={handleInputChange} required={true} placeholder="Name" className={classes.name}/>
+
                                 <input value={data.email}  type="email" name={"email"} onChange={handleInputChange} required={true} placeholder="Email*" className={classes.email}/>
+
                                 <input value={data.company_name}  type="text" name={"company_name"} onChange={handleInputChange} required={true} placeholder="Company" className={classes.company}/>
+
                                 <div className={classes.roleSize}>
                                     <input value={data.role}  type="text" name={"role"} onChange={handleInputChange} required={true} placeholder="Roles in Company" className={classes.role}/>
                                     <input value={data.company_size}  type="number" name={"company_size"} onChange={handleInputChange} required={true} placeholder="Company size" className={classes.size}/>

@@ -421,7 +421,7 @@ const useStyles = makeStyles({
       },
     },
   },
-  '@media(max-width: 320px)': {
+  '@media(min-width: 320px)': {
     pricingContainer: {
       width: '100%',
     },
@@ -452,7 +452,7 @@ const useStyles = makeStyles({
         padding: '12px',
         position: 'relative',
         bottom: '25px', 
-        left: '130px' ,   
+        left: '110px' ,   
        },
       fontWeight: 'bold',
      

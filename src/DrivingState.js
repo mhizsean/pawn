@@ -99,7 +99,24 @@ const useStyles = makeStyles({
     mobileWave:{
       display: 'none'
     },
-  }
+  },
+      '@media(max-width: 360px':{
+        mobileTopWave:{
+          display: 'none'
+        },
+        mobileWave: {
+          display: 'none'
+        },
+        extra:{
+          display: 'none'
+        },
+        drivingStates:{
+          marginTop: '20px',
+          height: '50px',
+          overflow: 'hidden'
+        }
+      }
+
 
 });
 export default function DrivingState() {
@@ -107,18 +124,18 @@ export default function DrivingState() {
 
   return (
     <section className={classes.root} id="locations">
-    {/* <svg className={classes.mobileTopWave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="red" fill-opacity="1" d="M0,96L120,85.3C240,75,480,53,720,58.7C960,64,1200,96,1320,112L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg> */}
-    <svg className={classes.mobileWave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="red" fill-opacity="1" d="M0,96L120,80C240,64,480,32,720,42.7C960,53,1200,107,1320,133.3L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
-      <div style={{height: '150px', overflow: 'hidden'}}>
+    <svg className={classes.mobileTopWave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L120,85.3C240,75,480,53,720,58.7C960,64,1200,96,1320,112L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
+    <svg className={classes.mobileWave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L120,80C240,64,480,32,720,42.7C960,53,1200,107,1320,133.3L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
+      <div className={classes.drivingStates} style={{height: '150px', overflow: 'hidden'}}>
         <svg
           viewBox="0 0 500 150"
           preserveAspectRatio="none"
           style={{height: '100%', width: '100%'}}
         >
-          <path className={classes.extra}
+          {/* <path className={classes.extra}
             d="M-1.97,23.19 C272.29,-26.14 288.66,23.19 500.27,91.28 L500.00,0.00 L0.00,0.00 Z"
             style={{stroke: 'none', fill: "#fff"}}
-          ></path>
+          ></path> */}
         </svg>
       </div>
       <div className="container">
