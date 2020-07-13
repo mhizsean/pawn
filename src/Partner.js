@@ -236,6 +236,7 @@ const useStyles = makeStyles({
             // backgroundImage: `url(${mobile})`,
             height: '100vh',
             width: '100%',
+            padding: '20px',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             position: 'relative',
@@ -302,31 +303,32 @@ const useStyles = makeStyles({
         },
         '@media(max-width: 320px)': {
             nav:{
-                backgroundColor: '#fff',
-                margin: '20px',
+                // backgroundColor: '#fff',
+                margin: '-20px',
+
 
             },
             partnerSection: {
-                height: '650px',
+                // height: '650px',
             }, 
             intro: {
-                marginLeft: '-20px',
+                // marginLeft: '-20px',
                 // width: '100%',
-                marginTop: '-60px'
+                // marginTop: '-60px'
             },
             headline: {
-                top: '20px',
-                width: '260px',
-                marginLeft: '-30px',
+                // top: '20px',
+                // width: '260px',
+                // marginLeft: '-30px',
                 lineHeight: '40px',
                 fontSize: '40px',
             },
             description: {
                 // marginTop: '20px',
-                top: '50px',
-                width: '250px',
-                padding: '0',
-                marginLeft: '-30px',
+                // top: '50px',
+                // width: '250px',
+                // padding: '0',
+                // marginLeft: '-30px',
                 lineHeight: '20px',
                 letterSpacing: ''
             },

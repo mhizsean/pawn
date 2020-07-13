@@ -72,11 +72,11 @@ const useStyles = makeStyles({
     marginLeft: '-33px',
   },
   phone: {
-    marginLeft: '-30px',
+    // marginLeft: '-30px',
     position: 'absolute',
-    top: '40vh',
+    top: '36vh',
     // width: '250px',
-    right: '50px'
+    right: '230px'
   },
   // '@media(min-width:1441px)': {
   //   cat: {
@@ -152,6 +152,8 @@ const useStyles = makeStyles({
     }, images: {
       display: 'flex',
       marginLeft: '10px',
+      padding: '50px',
+      marginBottom: '20px'
     },
 
     intro: {
@@ -208,7 +210,7 @@ const useStyles = makeStyles({
    
   },
   
-    '@media(max-width: 360px)': {
+    '@media(max-width: 554px)': {
       phone: { 
         position: 'relative',
         top: '40px',
@@ -220,6 +222,8 @@ const useStyles = makeStyles({
        images: {
          display: 'flex',
          width: '80%',
+        //  height: '250px',
+         padding: '50px',
          marginLeft: '-15px',
        },
        cat: {

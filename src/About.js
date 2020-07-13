@@ -289,8 +289,8 @@ const useStyles = makeStyles({
     },
   },
   pagination: {
-    width: '50%',
-    margin: '0 auto',
+    // width: '50%',
+    margin: 'auto',
 
     '& a': {
       color: 'black',
@@ -697,8 +697,7 @@ export default function About() {
                             <br />
                             <br />
                         </div>
-
-                        <p className={classes.pagText}>
+                        <p className={classes.pagText} style={{marginTop: 20}}>
                         If your career has been impacted by covid-19 and you don’t see a
                         position that fits what you’re looking for,
                         <br />

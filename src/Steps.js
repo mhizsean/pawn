@@ -24,7 +24,12 @@ const useStyles = makeStyles({
       }
   },
   sectionTitle:{
-    display: 'hidden'
+    fontSize: '40px',
+    marginTop: '40px',
+    marginBottom: '-40px',
+    color: '#fff',
+    fontWeight: 'bold',
+    // display: 'hidden'
   },
   topWave: {
     width: '100%',

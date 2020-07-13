@@ -521,11 +521,18 @@ textarea:focus {
   margin-top: -300px;
 }
 
-.aboutTopWave{
-  max-width: 100%;
-  margin-right: 0px;
-  padding:0px;
-  position: absolute;
-  top: 1300px;
+
+@media screen and (max-width: 737px) {
+  .top-one .desc {
+    margin: auto 100px;
+    width: 70%;
+  }
 }
 
+
+@media screen and (max-width: 427px) {
+  .top-one .desc {
+    margin: auto 20px;
+    width: 100%;
+  }
+}
