@@ -27,7 +27,7 @@
     "react-use": "^15.3.2",
     "scroll": "^3.0.1",
     "sweetalert2": "^9.15.2",
-    "swiper": "^5.4.1",
+    "swiper": "^6.5.1",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
